@@ -2,6 +2,10 @@
 
 Editorial, photo-led microsite for the four Singapore food heritage trails in the NIE 301 Trail Guide.
 
+## Live site
+
+https://mof-food-trails.vercel.app/
+
 ## Run locally
 
 This is a dependency-free static site. Open `index.html` directly, or serve this folder with any static server.

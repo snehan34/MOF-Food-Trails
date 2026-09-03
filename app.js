@@ -85,6 +85,6 @@ trail = function(slug) {
   const previous = trailOrder[(index - 1 + trailOrder.length) % trailOrder.length];
   const next = trailOrder[(index + 1) % trailOrder.length];
   const pagination = `<nav class="trail-pagination" aria-label="Trail navigation"><a class="trail-pagination-link" href="#/${previous}"><span class="mono">Previous trail</span><strong>&larr; ${trails[previous].name}</strong></a><a class="trail-pagination-link next" href="#/${next}"><span class="mono">Next trail</span><strong>${trails[next].name} &rarr;</strong></a></nav>`;
-  return renderTrail(slug).replace('<section class="callout">', pagination + '<section class="callout">');
+  return renderTrail(slug).replace('</section></main><footer class="footer">', '</section>' + pagination + '</main><footer class="footer">');
 };
 window.addEventListener('hashchange',render); render();

@@ -104,3 +104,15 @@ h1 { font-weight:800; }
 .pill { color:var(--ink); background:var(--bright); border-radius:50px; }
 .footer { margin-top:0; padding:40px max(5vw, calc((100% - 1200px)/2)); background:var(--ink); }
 @media (max-width:760px) { .site-header { padding:14px 5vw 62px; } .brand { top:62px; } .nav-left { align-self:flex-start; } .nav-right { align-self:flex-end; } .hero { padding:32px 22px; margin-top:24px; } .route-bar { gap:10px; } .route-tab { min-height:140px; padding:18px; } .route-meta { padding:18px; } }
+.hero-badge { width:310px; height:310px; margin:auto; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; color:var(--ink); background:#fdf4b5; border-radius:50%; transform:rotate(4deg); }
+.hero-badge strong { margin:10px 0; font:800 42px/0.9 'Playfair Display',serif; }
+.hero-badge span:last-child { font:500 10px/1.4 'DM Mono',monospace; letter-spacing:.12em; text-transform:uppercase; }
+.partner-lockup { display:flex; align-items:center; gap:16px; }
+.partner-logo { display:block; width:auto; height:58px; max-width:210px; object-fit:contain; filter:brightness(0) invert(1); }
+.partner-lockup a:first-child .partner-logo { height:76px; max-width:260px; }
+.location-link { color:inherit; text-decoration:none; }
+.location-link:hover { color:var(--accent); }
+.location-link span { display:inline-block; font:700 0.55em var(--mono); vertical-align:middle; margin-left:0.25em; }
+.partner-x { color:var(--bright); font:400 24px/1 'Playfair Display',serif; }
+.footer .partner-lockup a { display:flex; align-items:center; }
+@media (max-width:760px) { .hero-badge { width:245px; height:245px; } .hero-badge strong { font-size:34px; } .partner-lockup { gap:10px; } .partner-logo { max-width:165px; height:46px; } .partner-lockup a:first-child .partner-logo { height:58px; max-width:190px; } }

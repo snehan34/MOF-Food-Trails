@@ -116,3 +116,85 @@ h1 { font-weight:800; }
 .partner-x { color:var(--bright); font:400 24px/1 'Playfair Display',serif; }
 .footer .partner-lockup a { display:flex; align-items:center; }
 @media (max-width:760px) { .hero-badge { width:245px; height:245px; } .hero-badge strong { font-size:34px; } .partner-lockup { gap:10px; } .partner-logo { max-width:165px; height:46px; } .partner-lockup a:first-child .partner-logo { height:58px; max-width:190px; } }
+
+/* Responsive layout polish: keep navigation, cards and long location copy usable
+   on touch screens without changing the desktop visual system. */
+@media (min-width:761px) and (max-width:1040px) {
+  .site-header { padding:18px 24px; }
+  .brand { position:static; transform:none; order:0; }
+  .nav-left { order:-1; }
+  .nav-right { order:1; }
+  .nav a { padding:8px 10px; font-size:13px; }
+  .page { padding-right:24px; padding-left:24px; }
+  .hero { gap:34px; padding:44px; }
+  .hero-photo { height:360px; }
+  .hero-badge { width:250px; height:250px; }
+  .route-hero { gap:34px; padding:56px 0 48px; }
+  .stop-card { grid-template-columns:minmax(0,1fr) 220px; gap:20px; padding:18px; }
+  .stop-card img { height:180px; }
+  .stop-details { flex-wrap:wrap; }
+  .footer { padding-right:24px; padding-left:24px; }
+}
+
+@media (max-width:760px) {
+  html, body { overflow-x:hidden; }
+  .announcement { padding:7px 14px; font-size:9px; letter-spacing:.08em; }
+  .site-header { width:100%; min-height:116px; padding:12px 16px 58px; }
+  .brand { top:58px; font-size:13px; }
+  .brand-mark { width:32px; height:32px; font-size:18px; }
+  .nav { width:100%; gap:2px; }
+  .nav-right { justify-content:flex-end; }
+  .nav a { min-height:36px; display:inline-flex; align-items:center; padding:7px 9px; font-size:12px; }
+  .page { width:100%; padding:0 16px 56px; }
+  .hero { gap:30px; padding:28px 18px 24px; margin-top:18px; border-radius:20px; }
+  h1 { margin:14px 0 18px; font-size:clamp(46px,14vw,68px); }
+  h2 { font-size:clamp(36px,11vw,52px); }
+  h3 { font-size:26px; line-height:1.08; overflow-wrap:anywhere; }
+  .intro { font-size:16px; line-height:1.6; }
+  .hero-actions { margin-top:24px; }
+  .button { width:100%; justify-content:center; min-height:50px; }
+  .hero-photo { height:275px; }
+  .hero-badge { width:min(245px, 72vw); height:min(245px, 72vw); }
+  .hero-badge strong { font-size:clamp(30px,9vw,38px); }
+  .route-bar { grid-template-columns:1fr 1fr; gap:8px; margin:28px 0 62px; }
+  .route-tab { min-height:132px; padding:16px 14px; border-radius:14px; }
+  .route-tab strong { font-size:20px; }
+  .route-tab small { font-size:11px; line-height:1.35; }
+  .section-head { gap:14px; margin-bottom:25px; }
+  .section-head p { font-size:15px; }
+  .route-hero { gap:32px; padding:42px 0 38px; }
+  .route-hero h1 { font-size:clamp(48px,14vw,72px); }
+  .route-meta { grid-template-columns:1fr; gap:0; padding:18px; border-radius:18px; }
+  .meta-block { padding:13px 0; }
+  .meta-block:first-child { padding-top:0; border-top:0; }
+  .meta-block:last-child { padding-bottom:0; }
+  .route-shell { padding-bottom:58px; }
+  .timeline:before { left:19px; }
+  .stop { grid-template-columns:40px minmax(0,1fr); gap:12px; padding-bottom:26px; }
+  .stop-num { width:40px; height:40px; font-size:10px; }
+  .stop-card { min-width:0; gap:18px; padding:14px; border-radius:14px; }
+  .stop-card img { height:190px; }
+  .stop-card p { font-size:15px; line-height:1.6; overflow-wrap:anywhere; }
+  .address { font-size:11px!important; overflow-wrap:anywhere; }
+  .stop-details { flex-direction:column; gap:8px; line-height:1.45; }
+  .callout { gap:18px; margin:20px 0 56px; padding:24px 20px; border-radius:20px; }
+  .callout h2 { font-size:clamp(34px,10vw,45px); }
+  .callout p { margin:0; font-size:15px; }
+  .footer { padding:28px 16px; gap:26px; }
+  .partner-lockup { width:100%; justify-content:space-between; align-items:center; }
+  .partner-logo { max-width:36vw; height:auto; max-height:42px; }
+  .partner-lockup a:first-child .partner-logo { max-width:42vw; height:auto; max-height:54px; }
+  .partner-x { font-size:20px; }
+}
+
+@media (max-width:380px) {
+  .nav a { padding-right:7px; padding-left:7px; font-size:11px; }
+  .route-tab { min-height:124px; padding:14px 12px; }
+  .route-tab strong { font-size:18px; }
+  .hero { padding-right:15px; padding-left:15px; }
+  .hero-badge { width:210px; height:210px; }
+  .hero-badge strong { font-size:29px; }
+  .stop { grid-template-columns:34px minmax(0,1fr); gap:10px; }
+  .timeline:before { left:16px; }
+  .stop-num { width:34px; height:34px; }
+}
